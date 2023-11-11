@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  data_science:
+    image: mlenv
+    container_name: ml
+    stdin_open: true
+    tty: true
+    entrypoint: /bin/bash
+    restart: no
+    working_dir: /home/app/
+    volumes:
+      - .:/home/app/
+      # - $HOME/.vscode-server:$HOME/.vscode-server
